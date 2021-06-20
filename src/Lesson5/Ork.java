@@ -1,42 +1,19 @@
 package Lesson5;
 
-public class Ork {
-    private String race;
-    private String armor;
-    private String name;
-
-    public String getRace() {
-        return race;
+public class Ork extends Warrior {
+    public Ork (String name, Race race, Weapon weapon) {
+        super(name, race, weapon);
     }
-
-    public void setRace(String race) {
-        this.race = race;
+    public void  takeAWeapon(Weapon weapon) {
+        System.out.println("Ork takes " + weapon.getNameWeapon());
     }
-    public String getArmor() {
-        return armor;
+    public void attakingWords() {
+        System.out.println("Ork shouting SFPVUIWAEPAN!!!!!");
     }
-
-    public void setArmor(String armor) {
-        this.armor = armor;
+    public void attak() {
+        System.out.println("Ork is attaking!!");
     }
-    public String getName() {
-        return name;
+    public void celebrate() {
+        System.out.println("Ork shouting NFKFGFKLNVSDNDFSNFJ!!");
     }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Ork (String race, String armor) {
-        this.race = race;
-        this.armor = armor;
-    }
-
-    public void orkKill() {
-        System.out.println("Орк достал большой топор\n" +
-                "Прокричал что-то невнятное\n" +
-                "Снёс голову противнику\n" +
-                "Прокричал что-то невнятное");
-    }
-
 }
