@@ -36,13 +36,19 @@ package Lesson5;
  */
 
 public class Lesson5Main {
-    public static void main(String[] args) {
-        Ork ork1 = new Ork("Ork" , "Big axe");
-        ork1.orkKill();
-        Elf elf1 = new Elf("Elf", "Bow and arrows");
-        elf1.ElfKill();
-        Gnome gnome1 = new Gnome("Gnome", "Axe");
-        gnome1.GnomeKill();
-    }
+  public static void main(String[] args) {
+      Race orks = new Race("Ork");
+      Race gnomes = new Race("Gnome");
+      Race elfes = new Race("Elf");
+      Weapon ax = new Weapon("Big Axe");
+      Weapon bowAndArrows = new Weapon("Bow and Arrows");
+      Weapon hammer = new Weapon("Big Hammer");
+      Warrior ork = new Ork("King", orks, hammer);
+      Warrior gnome = new Gnome("Little", gnomes, ax);
+      Warrior elf = new Elf("Prist", elfes, bowAndArrows);
 
+      ork.killa();
+      gnome.killa();
+      elf.killa();
+  }
 }

@@ -1,9 +1,15 @@
-package Lesson5;
+package Lesson6.Task1;
 
 public class Gnome extends Warrior {
     public Gnome (String name, Race race, Weapon weapon) {
         super(name, race, weapon);
     }
+
+    @Override
+    public void killa() {
+
+    }
+
     public void  takeAWeapon(Weapon weapon) {
         System.out.println("Gnome takes " + weapon.getNameWeapon());
     }
